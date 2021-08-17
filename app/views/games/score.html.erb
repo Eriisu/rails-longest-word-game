@@ -1,0 +1,14 @@
+<h1>Results</h1>
+<% if @included %>
+<h1>The letters of your answer are incuded in the randomly generated letters: <%= @random_letters %></h1>
+  <% if @english_word %>
+  <h1>The user's answer is an english word</h1>
+    <% else %>
+    <h1>The user's answer is not an english word</h1>
+    <h1>Your score is: <%= @score %></h1>
+<% end %>
+<% else %>
+  <h1>The letters of your answer are not included in the randomly generated letters <%= @random_letters %></h1>
+<% end %>
+
+<%= link_to "Play again", '/new'%>
